@@ -1,5 +1,6 @@
 import EtfCards from "@/components/EtfCards";
 import FeeCalculator from "@/components/FeeCalculator";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import LeadForm from "@/components/LeadForm";
 
@@ -10,6 +11,7 @@ export default function Home() {
       <FeeCalculator />
       <EtfCards />
       <LeadForm />
+      <Footer />
     </>
   );
 }
