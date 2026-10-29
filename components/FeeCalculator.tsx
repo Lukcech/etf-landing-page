@@ -112,7 +112,8 @@ export default function FeeCalculator() {
             </p>
             <p className="mt-4 text-sm text-zinc-500">Odevzdáte na poplatcích:</p>
             <p className="mt-0.5 text-base font-medium text-zinc-700 tabular-nums">
-              {formatCzk(etfResult.totalFeesLost)}
+              {formatCzk(etfResult.totalFeesLost)} ({formatFeePercent(selectedEtf.terPercent)}%
+              ročně)
             </p>
           </article>
 
@@ -142,7 +143,8 @@ export default function FeeCalculator() {
             </div>
             <p className="mt-4 text-sm text-zinc-500">Odevzdáte na poplatcích:</p>
             <p className="mt-0.5 text-base font-medium text-zinc-700 tabular-nums">
-              {formatCzk(bankResult.totalFeesLost)}
+              {formatCzk(bankResult.totalFeesLost)} (
+              {formatFeePercent(bankFund.annualManagementFeePercent)}% ročně)
             </p>
           </article>
         </div>
@@ -162,6 +164,13 @@ export default function FeeCalculator() {
       </form>
     </section>
   );
+}
+
+function formatFeePercent(percent: number): string {
+  return percent.toLocaleString("cs-CZ", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 2,
+  });
 }
 
 function RangeField({

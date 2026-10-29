@@ -24,6 +24,10 @@ export interface EtfData {
   historicalAnnualReturnPercent: number;
   /** Stručné vysvětlení pro laika. */
   description: string;
+  /** Štítek rizikového / investičního profilu. */
+  riskLabel: string;
+  /** Volitelná poznámka pod popisem (např. vyšší kolísavost). */
+  riskNote?: string;
   /** Zdroj čísel včetně roku. */
   source: string;
 }
@@ -43,6 +47,7 @@ export const etfs: readonly EtfData[] = [
     terPercent: 0.03,
     historicalAnnualReturnPercent: 12.5,
     description: "500 největších amerických firem, například Apple či Microsoft.",
+    riskLabel: "Růstový profil",
     source: "Vanguard / FactSet, 2026",
   },
   {
@@ -53,6 +58,9 @@ export const etfs: readonly EtfData[] = [
     historicalAnnualReturnPercent: 17.8,
     description:
       "100 největších nefinančních firem z burzy Nasdaq. Většinu tvoří technologie, například Apple, Microsoft nebo Nvidia.",
+    riskLabel: "Vysoce dynamický",
+    riskNote:
+      "Vyšší kolísavost: výnosy nejsou garantované a fond prochází výraznými propady i růsty.",
     source: "Invesco / Nasdaq, 2026",
   },
   {
@@ -63,6 +71,7 @@ export const etfs: readonly EtfData[] = [
     historicalAnnualReturnPercent: 9.2,
     description:
       "Tisíce firem z celého světa v jednom fondu, od amerických gigantů po společnosti v Evropě, Asii i na rozvíjejících se trzích.",
+    riskLabel: "Globální diverzifikace",
     source: "Vanguard / FTSE Russell, 2026",
   },
 ];
