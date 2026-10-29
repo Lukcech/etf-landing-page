@@ -15,18 +15,18 @@ export default function LeadForm() {
   }
 
   return (
-    <section className="bg-zinc-50 px-4 pt-2 pb-16 font-sans text-zinc-900 sm:px-6">
+    <section className="bg-zinc-50 px-4 pt-2 pb-16 font-sans text-[#2b211b] sm:px-6">
       <div className="mx-auto max-w-xl rounded-2xl bg-white p-6 shadow-sm ring-1 ring-zinc-200 sm:p-8">
         {submitted ? (
           <div role="status">
-            <h2 className="text-2xl font-semibold tracking-tight">Děkujeme</h2>
+            <h2 className="text-2xl font-semibold tracking-tight text-[#2b211b]">Děkujeme</h2>
             <p className="mt-3 text-base leading-7 text-zinc-600">
-              Tahák odesíláme na {email}.
+              Průvodce odesíláme na {email}.
             </p>
           </div>
         ) : (
           <>
-            <h2 className="text-2xl font-semibold tracking-tight text-balance">
+            <h2 className="text-2xl font-semibold tracking-tight text-balance text-[#2b211b]">
               Chcete začít investovat do ETF bez chyb?
             </h2>
             <p className="mt-3 text-base leading-7 text-zinc-600">
@@ -46,13 +46,13 @@ export default function LeadForm() {
                 placeholder="vas@email.cz"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
-                className="w-full rounded-xl border border-zinc-200 px-4 py-3 text-base text-zinc-900 outline-none focus:border-zinc-900"
+                className="w-full rounded-xl border border-zinc-200 px-4 py-3 text-base text-[#2b211b] outline-none focus:border-[#2b211b]"
               />
               <button
                 type="submit"
-                className="shrink-0 rounded-full bg-zinc-900 px-6 py-3 text-base font-semibold text-white hover:bg-zinc-800"
+                className="shrink-0 rounded-xl bg-[#2b211b] px-6 py-3 text-base font-semibold text-white hover:bg-[#3d322c]"
               >
-                Získat tahák zdarma
+                Získat
               </button>
             </form>
           </>
