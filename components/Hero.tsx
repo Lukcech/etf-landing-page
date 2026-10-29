@@ -6,14 +6,14 @@ export default function Hero() {
           Aktuální data 2026 • Bez registrace
         </p>
 
-        <h1 className="text-4xl font-semibold tracking-tight text-balance text-[#2b211b] sm:text-5xl lg:text-6xl lg:leading-[1.08]">
-          Banka vám z investic potichu ukrajuje až <span className="text-red-600">30 %</span> na
-          poplatcích
+        <h1 className="text-3xl font-bold tracking-tight text-balance text-[#2b211b] sm:text-4xl md:text-5xl">
+          Banka vám z investic potichu ukrajuje až 30 % na poplatcích
         </h1>
 
         <p className="max-w-2xl text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
-          Zajímá vás, o kolik peněz reálně přicházíte v běžných fondech? Spočítejte si na 2
-          kliknutí, o kolik více naspoříte díky nízkonákladovým ETF z burzy NYSE.
+          Zajímá vás, o kolik peněz reálně přicházíte v běžných fondech? Spočítejte si,
+          <br />
+          o kolik více naspoříte díky nízkonákladovým ETF z burzy NYSE.
         </p>
 
         <a
